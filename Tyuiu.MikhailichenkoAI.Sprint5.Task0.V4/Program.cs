@@ -1,5 +1,4 @@
-﻿
-using System.IO;
+﻿using System.IO;
 using Tyuiu.MikhailichenkoAI.Sprint5.Task0.V4.Lib;
 namespace Tyuiu.MikhailichenkoAI.Sprint5.Task0.V4
 {

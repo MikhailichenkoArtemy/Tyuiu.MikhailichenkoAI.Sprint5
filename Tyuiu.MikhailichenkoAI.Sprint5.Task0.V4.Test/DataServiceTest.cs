@@ -11,7 +11,7 @@ namespace Tyuiu.MikhailichenkoAI.Sprint5.Task0.V4.Test
         {
             DataService ds = new DataService();
             string path = ds.SaveToFileTextData(2);
-            FileInfo fileInfo = new FileInfo(path);
+            FileInfo fileInfo = new FileInfo(path); 
             bool fileExists = fileInfo.Exists;
             bool wait = true;
             Assert.AreEqual(wait, fileExists);
