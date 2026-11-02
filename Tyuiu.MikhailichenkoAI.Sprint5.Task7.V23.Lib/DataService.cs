@@ -15,7 +15,7 @@ namespace Tyuiu.MikhailichenkoAI.Sprint5.Task7.V23.Lib
             }
 
             string res = Regex.Replace(str, "[а-яА-ЯёЁ]+", "");
-            res = res.Replace(" .", ".").Replace(" ,", ",").Replace("  ", " ");
+            res = Regex.Replace(res, @"\s+([.,])", "$1");
 
             using (StreamWriter writer = new StreamWriter(pathSave, false))
             {
