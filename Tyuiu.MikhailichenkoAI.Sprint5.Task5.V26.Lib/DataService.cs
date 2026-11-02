@@ -35,7 +35,7 @@ namespace Tyuiu.MikhailichenkoAI.Sprint5.Task5.V26.Lib
                 }
             }
 
-            double difference = sumPositive - sumNegative;
+            double difference = sumPositive + sumNegative;
 
             return Math.Round(difference, 3);
         }
