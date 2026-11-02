@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.IO;
+using System.Text.RegularExpressions;
 using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.MikhailichenkoAI.Sprint5.Task7.V23.Lib
 {
@@ -13,9 +14,9 @@ namespace Tyuiu.MikhailichenkoAI.Sprint5.Task7.V23.Lib
                 str = reader.ReadToEnd();
             }
 
-            string res = Regex.Replace(str, "[а-яА-ЯёЁ]+", "");
+            string res = Regex.Replace(str, "[а-яА-ЯёЁ]+", "").Replace("  ", " ");
 
-            using (StreamWriter writer = new StreamWriter(pathSave, true))
+            using (StreamWriter writer = new StreamWriter(pathSave, false))
             {
                 writer.Write(res);
             }
