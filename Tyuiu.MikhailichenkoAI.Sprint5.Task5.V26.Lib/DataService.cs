@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿
+using System.IO;
 using System.Globalization;
 using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.MikhailichenkoAI.Sprint5.Task5.V26.Lib
@@ -13,17 +14,22 @@ namespace Tyuiu.MikhailichenkoAI.Sprint5.Task5.V26.Lib
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    string cleanLine = line.Replace(',', '.').Trim();
+                    string[] numbers = line.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
 
-                    if (double.TryParse(cleanLine, NumberStyles.Any, CultureInfo.InvariantCulture, out double number))
+                    foreach (string str in numbers)
                     {
-                        if (number > 0)
+                        string cleanStr = str.Replace(',', '.').Trim();
+
+                        if (double.TryParse(cleanStr, NumberStyles.Any, CultureInfo.InvariantCulture, out double number))
                         {
-                            sumPositive += number;
-                        }
-                        else if (number < 0)
-                        {
-                            sumNegative += number;
+                            if (number > 0)
+                            {
+                                sumPositive += number;
+                            }
+                            else if (number < 0)
+                            {
+                                sumNegative += number;
+                            }
                         }
                     }
                 }

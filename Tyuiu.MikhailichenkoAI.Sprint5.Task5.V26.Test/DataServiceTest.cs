@@ -9,7 +9,7 @@ namespace Tyuiu.MikhailichenkoAI.Sprint5.Task5.V26.Test
         [TestMethod]
         public void CheckedExistsFile()
         {
-            string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask5V26.txt");
+            string path = Path.Combine(@"C:", "DataSprint5", "InPutDataFileTask5V26.txt");
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
 
