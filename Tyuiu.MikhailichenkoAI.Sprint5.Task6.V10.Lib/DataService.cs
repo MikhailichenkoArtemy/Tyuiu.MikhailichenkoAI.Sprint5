@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using tyuiu.cources.programming.interfaces.Sprint5;
+
+sing System.IO;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.MikhailichenkoAI.Sprint5.Task6.V10.Lib
@@ -10,10 +12,10 @@ namespace Tyuiu.MikhailichenkoAI.Sprint5.Task6.V10.Lib
             int count = 0;
             using (StreamReader reader = new StreamReader(path))
             {
-                string line = reader.ReadLine();
-                if (line != null)
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    string[] words = line.Split(' ');
+                    string[] words = line.Split(new char[] { ' ', ',', '.', '!', '?', ':', ';', '-', '\t' }, System.StringSplitOptions.RemoveEmptyEntries);
                     foreach (string word in words)
                     {
                         if (word.Length == 4)
