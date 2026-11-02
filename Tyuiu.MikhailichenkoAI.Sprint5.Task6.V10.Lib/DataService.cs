@@ -1,6 +1,4 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
-
-sing System.IO;
+﻿using System.IO;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.MikhailichenkoAI.Sprint5.Task6.V10.Lib
